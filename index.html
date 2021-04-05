@@ -205,10 +205,10 @@
   <div class="header__media">
     <div class="container">
       <div class="menu">
-        <div class="menu__burger">
+        <div class="media__burger">
           <img class="menu__burger--btn" src="img/icons/burger.svg" alt="">
         </div>
-        <span class="menu__exit--btn"></span>
+        <span class="media__exit--btn"></span>
         <div class="menu__logo">
           <img class="menu__logo--img" src="img/icons/logo.svg" alt="">
         </div>
@@ -498,45 +498,47 @@
 
   <div class="modal">
     <div class="modal__dialog">
-      <div class="modal__dialog--scroll">
-        <div class="modal__head">
-          <span class="modal__title">Напиши нам</span>
-          <div class="modal__exit"></div>
+      <div class="modal__wrapper">
+        <div class="modal__dialog--scroll">
+          <div class="modal__head">
+            <span class="modal__title">Напиши нам</span>
+            <div class="modal__exit"></div>
+          </div>
+          <form class="modal__form">
+            <div class="modal__input">
+              <span class="modal__label--name">Неверно заполнено имя</span>
+              <div class="modal__check"></div>
+              <div class="modal__error"></div>
+              <label class="modal__label" for="userName">Имя:</label>
+              <input class="input modal__name" type="text" name="userName" placeholder="Фамилия и Имя">
+            </div>
+            <div class="modal__input">
+              <span class="modal__label--name">Неверно заполнен телефон</span>
+              <div class="modal__check modal__check--tel"></div>
+              <div class="modal__error modal__error--tel"></div>
+              <label class="modal__label" for="userPhone">Телефон:</label>
+              <input class="input modal__tel" type="tel" name="userPhone">
+            </div>
+            <div class="modal__input">
+              <span class="modal__label--name">Неверно заполнена почта</span>
+              <div class="modal__check"></div>
+              <div class="modal__error"></div>
+              <label class="modal__label" for="userEmail">Эл. почта:</label>
+              <input class="input modal__email" type="email" name="userEmail" placeholder="Email">
+            </div>
+            <div class="modal__input">
+              <label class="modal__label" for="userMessage">Сообщение:</label>
+              <textarea class="modal__message" name="userMessage" placeholder="Сообщение..."></textarea>
+            </div>
+            <div class="checkbox">
+              <input class="modal__checkbox" type="checkbox" id="check" name="checkboxCheck">
+              <label class="policy" for="check"></label>
+              <span class="policy__check">Проставляя «галку» и далее нажимая кнопку «Принимаю», я даю согласие в его
+                полном изложении на обработку через сайт своих персональных данных.</span>
+            </div>
+            <button class="modal__submit" type="submit" disabled>Отправить</button>
+          </form>
         </div>
-        <form class="modal__form">
-          <div class="modal__input">
-            <span class="modal__label--name">Неверно заполнено имя</span>
-            <div class="modal__check"></div>
-            <div class="modal__error"></div>
-            <label class="modal__label" for="userName">Имя:</label>
-            <input class="input modal__name" type="text" name="userName" placeholder="Фамилия и Имя">
-          </div>
-          <div class="modal__input">
-            <span class="modal__label--name">Неверно заполнен телефон</span>
-            <div class="modal__check modal__check--tel"></div>
-            <div class="modal__error modal__error--tel"></div>
-            <label class="modal__label" for="userPhone">Телефон:</label>
-            <input class="input modal__tel" type="tel" name="userPhone">
-          </div>
-          <div class="modal__input">
-            <span class="modal__label--name">Неверно заполнена почта</span>
-            <div class="modal__check"></div>
-            <div class="modal__error"></div>
-            <label class="modal__label" for="userEmail">Эл. почта:</label>
-            <input class="input modal__email" type="email" name="userEmail" placeholder="Email">
-          </div>
-          <div class="modal__input">
-            <label class="modal__label" for="userMessage">Сообщение:</label>
-            <textarea class="modal__message" name="userMessage" placeholder="Сообщение..."></textarea>
-          </div>
-          <div class="checkbox">
-            <input class="modal__checkbox" type="checkbox" id="check" name="checkboxCheck">
-            <label class="policy" for="check"></label>
-            <span class="policy__check">Проставляя «галку» и далее нажимая кнопку «Принимаю», я даю согласие в его
-              полном изложении на обработку через сайт своих персональных данных.</span>
-          </div>
-          <button class="modal__submit" type="submit" disabled>Отправить</button>
-        </form>
       </div>
     </div>
     <!-- /.modal__dialog -->

@@ -30,6 +30,7 @@ $(window).on('scroll', function () {  // bg white
 
 const mainBtn = document.querySelectorAll('.main__btn'),
       headElem = document.querySelector('.header'),
+      headMedia = document.querySelector('.header__media'),
       modal = document.querySelector('.modal'),
       modalExit = document.querySelector('.modal__exit'),
       modalForm = document.querySelector('.modal__form'),
@@ -40,10 +41,13 @@ const mainBtn = document.querySelectorAll('.main__btn'),
       modalLabelName = document.querySelectorAll('.modal__label--name'),
       inputElem = document.querySelectorAll('input');
 const menuBurger = document.querySelector('.menu__burger'),
+      mediaBurger = document.querySelector('.media__burger'),
       mediaNav = document.querySelector('.media__nav'),
+      mediaBtnExit = document.querySelector('.media__exit--btn'),
       btnExit = document.querySelector('.menu__exit--btn');
 
 // media
+
 menuBurger.addEventListener('click', () => {
   menuBurger.classList.add('open');
   mediaNav.classList.add('open');
@@ -55,6 +59,19 @@ btnExit.addEventListener('click', () => {
   mediaNav.classList.remove('open');
   menuBurger.classList.remove('open');
   headElem.style.cssText = '';
+});
+
+mediaBurger.addEventListener('click', () => {
+  mediaBurger.classList.add('open');
+  mediaNav.classList.add('open');
+  mediaBtnExit.classList.add('open');
+  headMedia.style.cssText = 'background: #fff';
+});
+mediaBtnExit.addEventListener('click', () => {
+  mediaBtnExit.classList.remove('open');
+  mediaNav.classList.remove('open');
+  mediaBurger.classList.remove('open');
+  headMedia.style.cssText = '';
 });
 
 modalForm.addEventListener('focusout', (e) => {

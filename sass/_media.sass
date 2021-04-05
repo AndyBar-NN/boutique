@@ -8,7 +8,7 @@
       &--lac, &--hairdryer, &--ring, &--read
         display: none
 @media screen and ( max-width: 800px )
-  .menu
+  .menu, .media
     &__burger
       display: block
     &__burger.open
@@ -92,7 +92,7 @@
       background: transparent
       position: fixed
       display: flex
-  .menu
+  .menu, .media
     &__burger.open
       display: none
     &__logo
@@ -196,7 +196,7 @@
     &__title
       font-size: 36px
     &__list
-      margin-top: 432px
+      margin-top: 404px
     &__text
       font-size: 22px
   .background
@@ -215,9 +215,9 @@
     &
       background: rgba(255, 255, 255, 1)
     &__dialog
+      background: transparent
       max-width: 100%
-      padding-top: 30px
-      margin-top: 70px
+      margin-top: 60px
       border-radius: 0
       box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.132586) inset
 @media screen and ( max-width: 360px )
@@ -226,7 +226,11 @@
       flex-wrap: nowrap
       align-items: center
       flex-direction: column
-@media screen and ( min-height: 768px )
+@media screen and ( max-height: 768px )
   .main
     &__list
       margin-top: 504px
+@media screen and ( max-height: 740px )
+  .main
+    &__list
+      margin-top: 424px
