@@ -1,0 +1,237 @@
+.modal
+  &
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    background: rgba(0, 0, 0, 0.9)
+    z-index: 10
+    display: none
+  &.open
+    display: flex
+  &__dialog
+    &
+      position: relative
+      max-width: 504px
+      height: 560px
+      margin: auto
+      padding: 21px 10px 30px 30px
+      border-radius: 25px
+      background: #fff
+    &--scroll
+      &
+        height: 528px
+        overflow-y: scroll
+        padding: 0px 18px 19px 0px
+      &::-webkit-scrollbar
+        width: 5px
+        background-color: #FAD8DD
+      &::-webkit-scrollbar-thumb
+        border-radius: 25px
+        background-color: #F08B98
+  &__head
+    display: flex
+    justify-content: space-between
+  &__title
+    font-size: 28px
+    font-weight: bold
+    line-height: 34px
+    letter-spacing: 0.5px
+  &__exit
+    &
+      cursor: pointer
+      width: 14px
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 36px
+      right: 30px
+      width: 20px
+      height: 2px
+      background-color: #000
+      transform: rotate(45deg)
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 36px
+      right: 30px
+      width: 20px
+      height: 2px
+      background-color: #000
+      transform: rotate(-45deg)
+  &__form
+    margin-top: 13px
+    display: flex
+    flex-direction: column
+  &__label                       // start validation
+    &--name
+      position: absolute
+      top: 7px
+      right: 0
+      color: red
+      font-size: 10px
+      display: none
+  &__check
+    display: none
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    position: absolute
+    right: 16px
+    top: 40px
+  &__error
+    display: none
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    position: absolute
+    right: 16px
+    top: 40px
+  &__check
+    &
+      background: #2CA155
+    &--tel
+      &
+        left: 161px
+      &:before
+        margin-top: 11.5px
+        margin-left: 3.5px
+      &:after
+        margin-left: 6px
+        margin-top: -2.5px
+    &:before, &:after
+      content: ''
+      display: block
+      height: 1px
+      background-color: #fff
+    &:before
+      width: 5px
+      transform: rotate(40deg)
+      margin-top: 11.5px
+      margin-left: 3.5px
+    &:after
+      width: 10px
+      transform: rotate(-45deg)
+      margin-left: 6px
+      margin-top: -2.5px
+  &__error
+    &
+      background: #FF304C
+    &--tel
+      &
+        left: 161px
+      &:before
+        margin-top: 11.5px
+        margin-left: 3.5px
+      &:after
+        margin-left: 6px
+        margin-top: -2.5px
+    &:before, &:after
+      content: ''
+      display: block
+      height: 1px
+      background-color: #fff
+    &:before
+      width: 5px
+      transform: rotate(40deg)
+      margin-top: 11.5px
+      margin-left: 3.5px
+    &:after
+      width: 10px
+      transform: rotate(-45deg)
+      margin-left: 6px
+      margin-top: -2.5px
+    &:before, &:after
+      content: ''
+      display: block
+      width: 15px
+      height: 1px
+      background-color: #fff
+    &:before
+      transform: rotate(45deg)
+      margin-top: 9px
+      margin-left: 2.5px
+    &:after
+      transform: rotate(-45deg)
+      margin-left: 2.5px
+      margin-top: -0.5px
+  &__input
+    display: flex
+    flex-direction: column
+    position: relative
+  &__name
+    &:focus
+      border: 2px solid rgba(240, 139, 152, 1)
+  &__tel
+    &
+      width: 195px
+    &:focus
+      border: 2px solid rgba(240, 139, 152, 1)
+  &__email
+    &:focus
+      border: 2px solid rgba(240, 139, 152, 1)
+  &__message
+    &
+      height: 246px
+      margin-top: 2px
+      margin-bottom: 14px
+    &:focus
+      border: 2px solid rgba(240, 139, 152, 1)
+  &__submit
+    &
+      margin-top: 10px
+      opacity: 0.2
+  &__checkbox
+    &
+      margin: 0
+      appearance: none
+      position: absolute
+    &:checked +
+      .policy
+        &:before
+          transition: all 0.3s ease
+    &:checked +
+      .policy
+        &:after
+          transition: all 0.3s ease
+          opacity: 1
+.checkbox
+  display: flex
+  align-items: baseline
+  position: relative
+.policy
+  &__check
+    font-size: 12px
+    line-height: 16px
+    cursor: pointer
+    display: flex
+    margin-left: 30px
+  &:before
+    content: ''
+    position: absolute
+    top: -3px
+    width: 20px
+    height: 19px
+    margin-right: 10px
+    margin-bottom: 5px
+    border-radius: 6px
+    border: 2px solid #F08B98
+    transition: all 0.3s ease
+  &:after
+    content: ''
+    position: absolute
+    left: 4px
+    top: 2px
+    width: 12px
+    height: 12px
+    border-radius: 4px
+    background: url("../img/icons/check.svg") no-repeat center
+    background-size: contain
+    transition: all 0.3s ease
+    opacity: 0

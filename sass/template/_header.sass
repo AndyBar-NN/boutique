@@ -1,0 +1,267 @@
+.header
+  &
+    width: 100%
+    height: 70px
+    background: #fff
+    z-index: 99
+    display: flex
+    position: fixed
+  &__media
+    width: 100%
+    height: 70px
+    background: #fff
+    z-index: 99
+    display: flex
+    position: fixed
+    display: none
+.links
+  &
+    max-width: 1154px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin: auto
+    margin-top: 32px
+    height: 171px
+  &__list
+    height: 130px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    transition: 0.3s
+  &__title
+    &
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+                                        // hover links__list
+    &--head
+      &
+        font-size: 16px
+        font-weight: 700
+        cursor: pointer
+        margin: 0
+        transition: 0.3s
+      &:hover
+        color: #F08B98
+    &--bold
+      margin-top: 20px
+      margin-left: 17px
+    &--normal
+      font-size: 14px
+      line-height: 16px
+      font-weight: normal
+      max-width: 140px
+      margin-bottom: 17px
+      margin-left: 17px
+  &__elem
+    &
+      font-family: 'MuseoSansCyrl_500'
+      font-weight: normal
+      font-size: 14px
+      transition: 0.3s
+    &:hover
+      color: #F08B98
+  &__img
+    margin-top: -2px
+    border-radius: 15px
+    width: 220px
+    height: 132px
+    background: url('../img/lac_bg.jpg') no-repeat
+    background-size: cover
+  &__top
+    &
+      visibility: hidden
+      opacity: 0
+      max-width: 1920px
+      width: 100%
+      height: 260px
+      position: absolute
+      background: #fff
+      color: #000
+      margin: auto
+      border-top: 1px solid #F08B98
+      border-bottom: 1px solid #F08B98
+      top: 100%
+      left: 0
+      z-index: 10
+      transition: 0.2s
+.menu
+  &
+    max-width: 1170px
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: auto
+  &__burger
+    display: none
+  &__logo
+    display: flex
+    align-items: center
+.nav
+  &
+    width: 724px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0
+  &__arrow
+    &
+      position: relative
+      cursor: pointer
+    &--lac, &--hairdryer, &--ring
+      &
+        position: relative
+      &:before, &:after
+        content: ''
+        width: 0
+        height: 0
+        position: absolute
+        visibility: hidden
+        opacity: 0
+        z-index: 20
+        border-left: 10px solid transparent
+        border-right: 10px solid transparent
+        margin-left: -10px
+      &:before
+        border-bottom: 10px solid #F08B98
+        left: -50.4px
+        bottom: -35px
+      &:after
+        border-bottom: 10px solid #fff
+        left: -50.4px
+        bottom: -36px
+    &--left
+      &
+        position: absolute
+        background-color: transparent
+        top: 0px
+        left: 3px
+        display: block
+        transform: rotate(45deg)
+        float: right
+        border-radius: 2px
+      &:after
+        &
+          content: ""
+          background-color: #000
+          width: 6px
+          height: 2px
+          display: block
+          float: right
+          border-radius: 6px 10px 10px 6px
+          transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8)
+          z-index: -1
+          transition: 0.3s
+    &--right
+      &
+        position: absolute
+        background-color: transparent
+        top: 0px
+        left: 7px
+        display: block
+        transform: rotate(-45deg)
+        float: right
+        border-radius: 2px
+      &:after
+        &
+          content: ""
+          background-color: #000
+          width: 6px
+          height: 2px
+          display: block
+          float: right
+          border-radius: 10px 6px 6px 10px
+          transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8)
+          z-index: -1
+          transition: 0.3s
+  &__icon
+    &--lac
+      width: 30px
+      height: 32.5px
+    &--hairdryer
+      width: 34px
+      height: 31px
+    &--ring
+      width: 35px
+      height: 31px
+    &--read
+      width: 34.5px
+      height: 31.5px
+  &__lac, &__hairdryer, &__ring
+    &:hover .nav__arrow--left
+      transform-origin: center center
+      transform: rotate(-45deg)
+    &:hover .nav__arrow--right
+      transform-origin: center center
+      transform: rotate(45deg)
+    &:hover .nav__arrow--left:after
+      background-color: #F08B98
+    &:hover .nav__arrow--right:after
+      background-color: #F08B98
+    &:hover .links__top
+      visibility: visible
+      opacity: 1
+    &:hover .nav__arrow--lac:before
+      visibility: visible
+      opacity: 1
+    &:hover .nav__arrow--lac:after
+      visibility: visible
+      opacity: 1
+    &:hover .nav__arrow--hairdryer:before
+      visibility: visible
+      opacity: 1
+    &:hover .nav__arrow--hairdryer:after
+      visibility: visible
+      opacity: 1
+    &:hover .nav__arrow--ring:before
+      visibility: visible
+      opacity: 1
+    &:hover .nav__arrow--ring:after
+      visibility: visible
+      opacity: 1
+  &__menu
+    &
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 20px 0 18px 0
+      transition: 0.3s
+    &:hover
+      color: #F08B98
+    &--lac, &--hairdryer, &--ring, &--read
+      font-size: 16px
+      font-weight: 500
+      cursor: pointer
+  &__btn
+    &
+      width: 170px
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &--basket, &--heart, &--girl
+      width: 30px
+      height: 26px
+      cursor: pointer
+    &--basket
+      &
+        background: url("../img/icons/basket_empty.svg")
+        background-size: contain
+      &:hover
+        background: url("../img/icons/basket.svg")
+        background-size: contain
+    &--heart
+      &
+        background: url("../img/icons/heart_empty.svg")
+        background-size: contain
+      &:hover
+        background: url("../img/icons/heart.svg")
+        background-size: contain
+    &--girl
+      &
+        background: url("../img/icons/girl_empty.svg")
+        background-size: contain
+      &:hover
+        background: url("../img/icons/girl.svg")
+        background-size: contain

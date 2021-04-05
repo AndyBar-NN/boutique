@@ -1,0 +1,232 @@
+@media screen and ( max-width: 1180px )
+  .main
+    &__elem
+      flex-wrap: wrap
+@media screen and ( max-width: 950px )
+  .nav
+    &__icon
+      &--lac, &--hairdryer, &--ring, &--read
+        display: none
+@media screen and ( max-width: 800px )
+  .menu
+    &__burger
+      display: block
+    &__burger.open
+      display: none
+    &__logo
+      &--img
+        width: 112px
+    &__exit
+      &
+        position: relative
+      &--btn.open
+        display: block
+        width: 23px
+      &--btn
+        &
+          cursor: pointer
+          width: 14px
+          display: none
+        &:before, &:after
+          content: ''
+          display: block
+          position: absolute
+          top: 30px
+          left: 12px
+          width: 20px
+          height: 2px
+          background-color: #000
+        &:before
+          transform: rotate(45deg)
+        &:after
+          transform: rotate(-45deg)
+  .nav
+    &
+      display: none
+    &__btn
+      &
+        padding: 0
+        margin: 0
+        margin-bottom: 10px
+        width: auto
+      &--heart, &--girl
+        display: none
+  .media
+    &__cloison
+      width: 32px
+      border: 1px solid #EAEAEA
+      transform: rotate(90deg)
+    &__nav.open
+      display: flex
+      z-index: 20
+    &__nav
+      &
+        width: 100%
+        display: none
+        flex-direction: column
+        margin-top: 67px
+        padding: 0
+        background: #fff
+        position: fixed
+      &--lac, &--hairdryer, &--ring
+        width: 90%
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__blog
+      padding: 0
+      border-top: 2px solid #F08B98
+      border-bottom: 2px solid #F08B98
+    &__btn
+      &
+        margin: auto
+        padding: 17px 0 17px 0
+        width: 75%
+        display: flex
+        justify-content: space-around
+@media screen and ( max-width: 599px )
+  .header
+    &
+      display: none
+    &__media
+      background: transparent
+      position: fixed
+      display: flex
+  .menu
+    &__burger.open
+      display: none
+    &__logo
+      &--img
+        width: 112px
+    &__exit
+      &
+        position: relative
+      &--btn.open
+        display: block
+      &--btn
+        &
+          cursor: pointer
+          width: 14px
+          display: none
+        &:before, &:after
+          content: ''
+          display: block
+          position: absolute
+          top: 30px
+          left: 12px
+          width: 20px
+          height: 2px
+          background-color: #000
+        &:before
+          transform: rotate(45deg)
+        &:after
+          transform: rotate(-45deg)
+  .nav
+    &__btn
+      padding: 0
+      margin: 0
+      margin-bottom: 10px
+    &__icon
+      &--lac, &--hairdryer, &--ring, &--read
+        display: block
+        margin-right: 10px
+      &--lac
+        width: 25px
+        height: 32.5px
+      &--hairdryer
+        width: 25px
+        height: 31px
+      &--ring
+        width: 25px
+        height: 31px
+      &--read
+        width: 25px
+        height: 31.5px
+    &__arrow
+      &
+        margin-right: 32px
+      &--left
+        top: -3px
+        left: 3px
+      &--right
+        top: 0px
+        left: 3px
+    &__menu
+      &
+        justify-content: flex-start
+        padding: 18px 0 19px 0
+      &--lac, &--hairdryer, &--ring, &--read
+        font-weight: bold
+  .media
+    &__cloison
+      width: 32px
+      border: 1px solid #EAEAEA
+      transform: rotate(90deg)
+    &__nav.open
+      display: flex
+      z-index: 20
+    &__nav
+      &
+        width: 100%
+        display: none
+        flex-direction: column
+        margin-top: 67px
+        padding: 0
+        background: #fff
+        position: fixed
+      &--lac, &--hairdryer, &--ring
+        width: 90%
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__blog
+      padding: 0
+      border-top: 2px solid #F08B98
+      border-bottom: 2px solid #F08B98
+    &__btn
+      &
+        margin: auto
+        padding: 17px 0 17px 0
+        width: 75%
+        display: flex
+        justify-content: space-around
+  .main
+    &__hello
+      margin-top: 227px
+    &__title
+      font-size: 36px
+    &__list
+      margin-top: 432px
+    &__text
+      font-size: 22px
+  .background
+    &
+      display: none
+    &__media
+      height: 568px
+      display: flex
+      justify-content: flex-end
+      flex-direction: column
+      align-items: center
+      background-color:
+      background: linear-gradient( rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)), url('../img/mobile_bg.jpg') no-repeat
+      background-position: top left 50%
+  .modal
+    &
+      background: rgba(255, 255, 255, 1)
+    &__dialog
+      max-width: 100%
+      padding-top: 30px
+      margin-top: 70px
+      border-radius: 0
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.132586) inset
+@media screen and ( max-width: 360px )
+  .main
+    &__elem
+      flex-wrap: nowrap
+      align-items: center
+      flex-direction: column
+@media screen and ( min-height: 768px )
+  .main
+    &__list
+      margin-top: 504px
