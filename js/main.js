@@ -146,7 +146,7 @@ function validEmail(mail) {
 
 function modalToggle() {                    // not scroll in modal
   modal.classList.toggle('open');
-  if (modal.classList.contains("open")) {
+  if (modal.classList.contains('open')) {
     disableScroll();
   } else {
     enableScroll();
