@@ -31,6 +31,7 @@ $(window).on('scroll', function () {  // bg white
 const mainBtn = document.querySelectorAll('.main__btn'),
       headElem = document.querySelector('.header'),
       headMedia = document.querySelector('.header__media'),
+      headMediaBg = document.querySelector('.header__media--bg'),
       modal = document.querySelector('.modal'),
       modalExit = document.querySelector('.modal__exit'),
       modalForm = document.querySelector('.modal__form'),
@@ -66,12 +67,16 @@ mediaBurger.addEventListener('click', () => {
   mediaNav.classList.add('open');
   mediaBtnExit.classList.add('open');
   headMedia.style.cssText = 'background: #fff';
+  headMediaBg.style.cssText = 'background: #fff';
+  headMediaBg.style.display = 'flex';
 });
 mediaBtnExit.addEventListener('click', () => {
   mediaBtnExit.classList.remove('open');
   mediaNav.classList.remove('open');
   mediaBurger.classList.remove('open');
   headMedia.style.cssText = '';
+  headMediaBg.style.cssText = '';
+  headMediaBg.style.display = '';
 });
 
 modalForm.addEventListener('focusout', (e) => {

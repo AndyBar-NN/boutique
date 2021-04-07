@@ -6,16 +6,30 @@
     z-index: 99
     display: flex
     position: fixed
-  &__media
-    width: 100%
-    height: 70px
-    background: #fff
-    z-index: 99
+  &__mobile
     display: flex
-    position: fixed
-    display: none
+    width: 100%
+  &__media
+    &
+      width: 100%
+      height: 70px
+      background: #fff
+      z-index: 99
+      display: flex
+      position: fixed
+      display: none
+      justify-content: space-between
+    &--bg
+      width: 100%
+      height: 70px
+      background: #fff
+      z-index: 99
+      display: flex
+      position: fixed
+      display: none
 .links
   &
+    position: relative
     max-width: 1154px
     width: 100%
     display: flex
@@ -45,6 +59,8 @@
       &:hover
         color: #F08B98
     &--bold
+      font-weight: bold
+      font-size: 16px
       margin-top: 20px
       margin-left: 17px
     &--normal

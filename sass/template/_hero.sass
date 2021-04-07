@@ -9,11 +9,14 @@
     justify-content: flex-end
     flex-direction: column
     align-items: center
-.container__list
-  width: 90%
-  display: flex
-  justify-content: center
-.main
+.container
+  &__list, &__media
+    width: 93%
+    display: flex
+    justify-content: center
+  &__media
+    display: none
+.main, .media
   &
     position: relative
     display: flex
@@ -88,3 +91,6 @@
     font-family: "MuseoSansCyrl_500"
     max-width: 110px
     text-align: center
+.media
+  &__list
+    display: none

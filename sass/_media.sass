@@ -47,14 +47,14 @@
       &
         padding: 0
         margin: 0
-        margin-bottom: 10px
+        margin-bottom: 5px
         width: auto
       &--heart, &--girl
         display: none
   .media
     &__cloison
       width: 32px
-      border: 1px solid #EAEAEA
+      border: 1px solid rgba(240, 139, 152, 0.15)
       transform: rotate(90deg)
     &__nav.open
       display: flex
@@ -77,7 +77,7 @@
       padding: 0
       border-top: 2px solid #F08B98
       border-bottom: 2px solid #F08B98
-    &__btn
+    &__button
       &
         margin: auto
         padding: 17px 0 17px 0
@@ -92,7 +92,12 @@
       background: transparent
       position: fixed
       display: flex
-  .menu, .media
+  .container
+    &__list
+      display: none
+    &__media
+      display: flex
+  .menu, .mobile
     &__burger.open
       display: none
     &__logo
@@ -122,10 +127,6 @@
         &:after
           transform: rotate(-45deg)
   .nav
-    &__btn
-      padding: 0
-      margin: 0
-      margin-bottom: 10px
     &__icon
       &--lac, &--hairdryer, &--ring, &--read
         display: block
@@ -158,6 +159,15 @@
       &--lac, &--hairdryer, &--ring, &--read
         font-weight: bold
   .media
+    &__hello
+      margin-top: 227px
+    &__title
+      font-size: 36px
+    &__list
+      display: flex
+      margin-top: 404px
+    &__text
+      font-size: 22px
     &__cloison
       width: 32px
       border: 1px solid #EAEAEA
@@ -183,7 +193,7 @@
       padding: 0
       border-top: 2px solid #F08B98
       border-bottom: 2px solid #F08B98
-    &__btn
+    &__button
       &
         margin: auto
         padding: 17px 0 17px 0
@@ -192,13 +202,7 @@
         justify-content: space-around
   .main
     &__hello
-      margin-top: 227px
-    &__title
-      font-size: 36px
-    &__list
-      margin-top: 404px
-    &__text
-      font-size: 22px
+      display: none
   .background
     &
       display: none
@@ -214,23 +218,46 @@
   .modal
     &
       background: rgba(255, 255, 255, 1)
+    &__title
+      margin-top: 30px
+      margin-bottom: 6px
     &__dialog
-      background: transparent
-      max-width: 100%
-      margin-top: 60px
-      border-radius: 0
-      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.132586) inset
+      &
+        background: transparent
+        max-width: 100%
+        margin-top: 60px
+        border-radius: 0
+        padding: 0px 10px 0px 9px
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.132586) inset
+      &:before
+        top: 29px
+    &__wrapper
+      &::-webkit-scrollbar-track-piece:start
+        margin-top: 29px
+      &::-webkit-scrollbar-track-piece:end
+        margin-bottom: 12px
+    &__exit
+      &:before, &:after
+        top: 45px
 @media screen and ( max-width: 360px )
   .main
     &__elem
-      flex-wrap: nowrap
       align-items: center
-      flex-direction: column
-@media screen and ( max-height: 768px )
+    &__goods
+      width: 145px
+@media  ( min-height: 640px ) and ( max-height: 768px )
   .main
+    &__hello
+      margin-top: 204px
     &__list
       margin-top: 504px
-@media screen and ( max-height: 740px )
+@media  ( min-height: 0px ) and ( max-height: 640px )
   .main
+    &__hello
+      margin-top: 154px
     &__list
       margin-top: 424px
+@media screen and ( max-height: 620px )
+  .modal
+    &__dialog
+      height: 500px
